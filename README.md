@@ -48,3 +48,22 @@ Treinar estruturação de layout, organização de navegação, estilização co
 ├── barconossafrota2.jpg
 ├── destino.png
 └── nossafrota.png
+```
+---
+## 🚀 Como Visualizar
+
+  1. Clone o repositório:
+
+    git clone https://github.com/seu-usuario/luxo-aluguel-iates.git
+
+  2.Abra o arquivo index.html em qualquer navegador:
+
+      cd luxo-aluguel-iates
+      start index.html  # No Windows
+
+## 🙋‍♂️ Autor
+
+  - Patryck Willyams
+  - patryckwillyams@gmail.com
+  - https://www.linkedin.com/in/patryck-willyams-90384017b/
+      
