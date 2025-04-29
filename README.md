@@ -30,7 +30,9 @@ Treinar estruturação de layout, organização de navegação, estilização co
 ---
 
 ## 📷 Prévia
-> `![descrição](caminho-da-imagem.png)`
+![Banner principal do site](prévia.png)
+
+
 
 ---
 
