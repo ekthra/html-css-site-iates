@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Projeto Iates</title>
+    <style>
+        /* Se refere ao código como um todo */
+        body {
+            background-color: #EBEBEB;
+            font-family: Arial, sans-serif;
+            color: #21272B;
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        /* Se refere ao cabeçalho e ao menu navegável */
+        header {
+            background-color: #21272B;
+            color: #FFFFFF;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            position: sticky;
+            top: 0px;
+            z-index: 10;
+        }
+
+        /* Se refere ao titulo da header */
+        .logo-titulo {
+            display: flex;
+            align-items: center;
+            font-style: italic;
+            position: relative;
+            left: 35px;
+        }
+        
+        /* Se refere a imagem atrelada ao título */
+        .logo-titulo img {
+            margin-right: 10px;
+            width: 55px;
+            height: auto;
+        }
+        
+        /* Se refere a parte de "Alugue Iates" do título principal */
+        .seguinte
+         {
+            font-size: 22px;
+            font-weight: 100;
+         }
+        
+        /* Se refere ao título "Luxo Alugue Iates" como um todo */
+        .titulos
+         {
+            font-size: 17px;
+            line-height: 0.3;
+            font-weight: 100
+        }
+
+        /* Se refere ao título "Luxo Alugue Iates" e apenas "Luxo  */
+        .titulos .luxo {
+            color: #1BB4E8;
+            font-weight: 100;
+        }
+
+        /* Se refere ao menu navegável */
+        nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            position: relative;
+            top: 25px;
+            right: 50px;
+        }
+        
+        /* Se refere aos links do menu navegável */
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        /* Adciona a "|" ao menu navegável */
+        nav a::after {
+            content: "|";
+            margin-left: 15px;
+            color: #ffffff;
+        }
+
+        /* Faz com que a "|" não seja adcionada no ultimo elemento */
+        nav a:last-child::after {
+            content: ""; /* Remove a barra do último item */
+        }
+
+        /* Dar cor ao passar o mouse por cima do menu */
+        nav a:hover {
+            color: #1BB4E8;
+        }
+        
+        /* Dá cor para mostrar onde o usuário está na página */
+        #atual
+
+        {
+            color: #1BB4E8;
+
+        }
+
+        /* Se refere ao Banner principal */
+        .banner {
+            position: relative;
+            max-width: 100%;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            bottom: 20px;
+        }
+        
+        /* Se refere ao texto do banner */
+        .texto-banner {
+            position: absolute;
+            bottom: 100px;
+            right: 110px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 100px;
+            color: #FFFFFF;
+            max-width: 50%;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+        }
+
+        /* Se refere ao h2 dentro do texto do banner */
+        .texto-banner h2 {
+            font-size: 40px;
+            margin: 0;
+            line-height: 1.2;
+            position: relative;
+            right: 60px;
+            bottom: 50px;
+            font-style: italic;
+            font-weight: 10;
+            
+        }
+
+        /* Se refere ao p dentro do texto do banner */ 
+        .texto-banner p {
+            font-size: 16px;
+            margin: 0;
+            line-height: 1.8;
+            font-style: italic;
+        }
+
+        /* Se refere ao texto do banner e a mensagem */
+        .texto-banner .mensagem {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 100;
+            position: relative;
+            right: 60px;
+            bottom: 10px;
+        }
+        
+        /* Se refere ao número de celular para contato */
+        #celular
+        {
+            color: #C6B07F;
+            position: relative;
+            right: 210px;
+        }
+
+        /* Se refere a imagem atrelada a mensagem */
+        .mensagem img {
+            width: 35px;
+            height: auto;
+        }
+
+        /* Estilo das seções Destinos e Nossa Frota */
+        .secao-destinos-nossafrota {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 90%;
+            margin: 20px auto;
+        }
+
+
+        .secao-destinos-nossafrota h2 {
+            background-color: inherit;
+            color: #FFFFFF;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .destinos h2, .nossa-frota h2, .nossa-frota h3, .destinos h3 {
+            font-size: 22px;
+            font-style: italic;
+            font-weight: 100;
+        }
+
+        .destinos h2 {
+            background-color: #1BB4E8;
+        }
+
+        .nossa-frota h2 {
+            background-color: #C6B07F;
+        }
+
+        .destino-icone, .frota-icone {
+            width: 45px;
+            height: 35px;
+        }
+
+        .destino-imagem, .frota-imagens {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Ajuste para imagens dentro de Nossa Frota */
+        .frota-imagens {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .frota-imagens img {
+            width: 48%;
+            border-radius: 8px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #dbdbdb;
+            color: #000000;
+            text-align: left;
+            padding: 15px 100px;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-titulo">
+            <img src="barco1.png" alt="Logo de um barco">
+            <div class="titulos">
+                <h1 class="luxo">Luxo</h1><br><span class="seguinte">Aluguel de Iates</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#" id="atual">Página Inicial</a>
+            <a href="#">Aluguel de Iates</a>
+            <a href="#">Destinos</a>
+            <a href="#">Tripulação</a>
+            <a href="#">Contato</a>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <img src="barcoprincipal.jpg" alt="Um grande barco no mar">
+        <div class="texto-banner">
+            <h2>Você só encontra coisas boas,<br>se combinar luxo e paixão.</h2>
+            <div class="mensagem">
+                <img src="barco1.png" alt="Icone de uma barco">
+                <p>Ligue agora para agendar as férias de<br> sua vida:</p><p id="celular"><br>(00) 8000-0000</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="secao-destinos-nossafrota">
+        <div class="destinos">
+            <h2><img src="destino.png" alt="Icone de um barco" class="destino-icone">Destinos</h2>
+            <h3>Sou um título. Clique aqui para me editar.</h3>
+            <p>Clique aqui para adicionar seu texto e me editar. É fácil. Basta clicar em "Editar Texto" ou clicar duas vezes sobre mim e poderá adicionar seu próprio conteúdo e mudar fontes. Sou um ótimo lugar para contar sua história e permitir que seus visitantes saibam um pouco mais sobre você.</p>
+            <img src="barcodestino.jpg" alt="Imagem de destino" class="destino-imagem">
+        </div>
+        <div class="nossa-frota">
+            <h2><img src="nossafrota.png" alt="Icone de um barco" class="frota-icone">Nossa frota</h2>
+            <h3>Sou um título. Clique aqui para me editar.</h3>
+            <p>Clique aqui para adicionar seu texto e me editar. É fácil. Basta clicar em "Editar Texto" ou clicar duas vezes sobre mim e poderá adicionar seu próprio conteúdo e mudar fontes. Sou um ótimo lugar para contar sua história e permitir que seus visitantes saibam um pouco mais sobre você.</p>
+            <div class="frota-imagens">
+                <img src="barconossafrota1.jpg" alt="Imagem da frota 1">
+                <img src="barconossafrota2.jpg" alt="Imagem da frota 2">
+                <img src="barconossafrota1.jpg" alt="Imagem da frota 1">
+                <img src="barconossafrota2.jpg" alt="Imagem da frota 2">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <small id="final">&copy; 2023 por Luxo aluguel de iates</small>
+    </footer>
+</body>
+</html>
