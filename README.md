@@ -54,7 +54,7 @@ Treinar estruturação de layout, organização de navegação, estilização co
 
   1. Clone o repositório:
 
-    git clone https://github.com/seu-usuario/luxo-aluguel-iates.git
+    git clone https://github.com/ekthra/html-css-site-iates.git
 
   2.Abra o arquivo index.html em qualquer navegador:
 
